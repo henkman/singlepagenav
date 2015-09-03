@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+		.pagenav-active {
+			color:white;
+		}
+		[data-pagenav] {
+			position:fixed;
+			left: 200px;
+			background-color:gray;
+			font-size:2em;
+		}
+		[data-pagenav-to] {
+			padding-left:5px;
+			padding-right:5px;
+		}
+		p {
+			min-width:200px;
+			min-height:1200px
+		}
+		</style>
+		<script src="singlepagenav.min.js"></script>
+		<script>
+		function init() {
+			singlePageNavigation.init("nav");
+		}
+		</script>
+	</head>
+	<body onload="init()">
+		<div data-pagenav></div>
+		
+		<div data-pagenav-id="a1" data-pagenav-name="foo">
+			<p style="background-color:red;">
+			foo
+			</p>
+		</div>
+		<div data-pagenav-id="b2" data-pagenav-name="bar">
+			<p style="background-color:green;">
+			bar
+			</p>
+		</div>
+		<div data-pagenav-id="c3" data-pagenav-name="flamingo">
+			<p style="background-color:blue;">
+			flamingo
+			</p>
+		</div>
+		
+	</body>
+</html>
